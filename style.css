@@ -8,6 +8,10 @@
     grid-template-columns: 1fr 5fr;
 }
 
+.icon {
+    width: 30px;
+}
+
 /* ======== SIDEBAR ======== */
 
 .sidebar {
@@ -33,16 +37,58 @@
     width: 50px;
 }
 
-.sidebar .icon {
-    width: 30px;
-}
-
-
 /* ======== HEADER ======== */
 
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.header .upper-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .upper-row .search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.header .upper-row #search {
+    width: 100%;
+}
+
+.header .upper-row .user-account {
+    display: flex;
+    align-items: center;
+}
+
+.header .upper-row .user-profile-picture img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.header .bottom-row {
+    display: flex;
+    align-items: center;
+}
+
+.header .bottom-row .user-buttons {
+    margin-left: auto;
+}
+
+.header .bottom-row .user-profile-picture img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
 }
 
 /* ======== MAIN CONTENT ======== */
