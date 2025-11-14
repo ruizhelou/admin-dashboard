@@ -7,6 +7,8 @@
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: min-content 1fr;
+    height: 100vh;
 }
 
 .icon {
@@ -21,21 +23,36 @@
 
     display: grid;
     grid-template-rows: repeat(3, min-content);
+    background-color: rgb(25, 146, 212);
+    gap: 40px;
+    padding: 15px;
+    color: white;
 }
 
 .sidebar li {
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .sidebar .branding p {
     display: flex;
     align-items: center;
+    font-size: 2rem;
+}
+
+.sidebar li {
+    font-size: 1.5rem;
 }
 
 .sidebar .branding .icon {
     width: 50px;
+}
+
+.sidebar .icon {
+    filter: brightness(0) invert(1);
+    margin-right: 15px;
 }
 
 /* ======== HEADER ======== */
@@ -45,7 +62,7 @@
     grid-column: 2 / 3;
 
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content min-content;
 }
 
 .header .upper-row {
